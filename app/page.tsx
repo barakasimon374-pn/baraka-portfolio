@@ -396,8 +396,6 @@ export default function Home() {
     <div className="mt-8">
       <a
   href="https://mail.google.com/mail/?view=cm&fs=1&to=simonngota3@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
   className="inline-block rounded-lg bg-cyan-400 px-6 py-3 font-semibold text-slate-950 transition hover:bg-cyan-300"
 >
   Get in Touch →
