@@ -1,3 +1,6 @@
+"use client";
+import { useState } from "react";
+import { useForm } from "@formspree/react";
 const projects = [
   {
     title: "Accounts Receivable & Collections",
@@ -8,7 +11,11 @@ const projects = [
 ];
 
 export default function Home() {
-  return (
+const [state, handleSubmit] = useForm("xyeyglbo");
+const [name, setName] = useState("");
+const [email, setEmail] = useState("");
+const [message, setMessage] = useState("");
+return (
    <main className="min-h-screen scroll-smooth bg-slate-950 text-white">
       {/* Navigation */}
       <nav className="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
@@ -369,10 +376,9 @@ export default function Home() {
           Data Analysis
         </h3>
         <p className="mt-2 text-sm leading-6 text-slate-400">
-          <p className="mt-2 text-sm leading-6 text-slate-400">
-  Analyzing data to uncover patterns, trends, and actionable insights that support informed business decisions.
+  Analyzing data to uncover patterns, trends, and actionable insights that
+  support informed business decisions.
 </p>
-        </p>
       </div>
     </div>
   </div>
@@ -393,16 +399,53 @@ export default function Home() {
       I'm open to opportunities in data analysis and business intelligence, where I can transform data into meaningful insights that support better decision-making.
     </p>
 
-    <div className="mt-8">
-     <a
-  href="https://mail.google.com/mail/?view=cm&fs=1&to=simongota3@gmail.com"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="inline-block rounded-lg border border-slate-700 px-6 py-3 font-semibold text-white"
->
-  Get In Touch →
-</a>
-    </div>
+   <form onSubmit={handleSubmit} className="mt-8 max-w-xl space-y-4">
+  <input
+    type="text"
+    name="name"
+    placeholder="Your name"
+    value={name}
+    onChange={(e) => setName(e.target.value)}
+    required
+    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-white"
+  />
+
+  <input
+    type="email"
+    name="email"
+    placeholder="Your email"
+    value={email}
+    onChange={(e) => setEmail(e.target.value)}
+    required
+    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-white"
+  />
+
+  <textarea
+    name="message"
+    placeholder="Your message"
+    rows={5}
+    value={message}
+    onChange={(e) => setMessage(e.target.value)}
+    required
+    className="w-full rounded-lg border border-slate-700 bg-slate-900 px-4 py-3 text-white"
+  />
+
+  {state.succeeded && (
+    <p className="text-green-400">Message sent successfully!</p>
+  )}
+
+  {state.errors && (
+    <p className="text-red-400">Something went wrong. Please try again.</p>
+  )}
+
+  <button
+    type="submit"
+    disabled={state.submitting}
+    className="rounded-lg bg-cyan-400 px-6 py-3 font-semibold text-slate-950 disabled:opacity-50"
+  >
+    {state.submitting ? "Sending..." : "Send Message →"}
+  </button>
+</form>   
   </div>
 </section>
 
