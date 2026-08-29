@@ -2,13 +2,20 @@
 import { useState } from "react";
 import { useForm } from "@formspree/react";
 const projects = [
-  {
-    title: "Accounts Receivable & Collections",
-    description:
-      "An interactive Power BI dashboard designed to monitor invoicing, payments, outstanding receivables, collection performance, and customer aging.",
-    tools: ["Power BI", "Excel", "DAX"],
-  },
+{
+title: "Accounts Receivable & Collections",
+description:
+"An interactive Power BI dashboard designed to monitor invoicing, payments, outstanding receivables, collection performance, and customer aging.",
+tools: ["Power BI", "Excel", "DAX"],
+},
+{
+title: "Accounts Payable Dashboard",
+description:
+"An interactive Power BI dashboard designed to monitor outstanding invoices, payment status, payable aging, and vendor exposure to support better cash-flow and payment decisions.",
+tools: ["Power BI", "Excel", "DAX"],
+},
 ];
+
 
 export default function Home() {
 const [state, handleSubmit] = useForm("xyeyglbo");
@@ -149,36 +156,42 @@ return (
   </div>
 </section>
 
-      {/* Projects */}
+            {/* Projects */}
       <section id="projects" className="bg-slate-900/50">
         <div className="mx-auto max-w-6xl px-6 py-20">
+
           <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
-            Featured Project
+            Featured Projects
           </p>
 
           <h2 className="mt-3 text-3xl font-bold">
-            Accounts Receivable & Collections Dashboard
+            Data Analytics & Business Intelligence
           </h2>
 
-        <div className="group mt-10 rounded-2xl border border-slate-800 bg-slate-950 p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
-           <img
-  src="/accounts-receivable-banner.png"
-  alt="Accounts Receivable and Collections Dashboard Overview"
- className="mb-6 w-full rounded-xl border border-cyan-500/30 shadow-lg shadow-cyan-500/10 transition duration-300 hover:scale-[1.02] hover:shadow-cyan-500/20"
-/>
+          {/* Accounts Receivable Project */}
+          <div className="group mt-10 rounded-2xl border border-slate-800 bg-slate-950 p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
+
+            <h3 className="text-2xl font-bold">
+              Accounts Receivable & Collections Dashboard
+            </h3>
+
+            <img
+              src="/accounts-receivable-banner.png"
+              alt="Accounts Receivable and Collections Dashboard Overview"
+              className="mt-6 mb-6 w-full rounded-xl border border-cyan-500/30 shadow-lg shadow-cyan-500/10"
+            />
+
             <div className="flex flex-wrap items-start justify-between gap-6">
+
               <div className="max-w-3xl">
+
                 <img
                   src="/accounts-receivable-dashboard.png"
                   alt="Accounts Receivable & Collections Power BI Dashboard"
                   className="mb-6 w-full rounded-xl border border-slate-700"
                 />
 
-                <h3 className="text-2xl font-bold">
-                  {projects[0].title}
-                </h3>
-
-                <p className="mt-4 leading-7 text-slate-300">
+                <p className="leading-7 text-slate-300">
                   {projects[0].description}
                 </p>
 
@@ -192,6 +205,7 @@ return (
                     </span>
                   ))}
                 </div>
+
               </div>
 
               <div className="rounded-xl border border-slate-800 bg-slate-900 px-5 py-4">
@@ -203,14 +217,15 @@ return (
                   Receivables & Collections
                 </p>
               </div>
+
             </div>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
+
               <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
                 <p className="text-sm font-semibold text-cyan-400">
                   Outstanding Balances
                 </p>
-
                 <p className="mt-2 text-sm text-slate-400">
                   Which customers have the highest outstanding receivables?
                 </p>
@@ -220,7 +235,6 @@ return (
                 <p className="text-sm font-semibold text-cyan-400">
                   Collection Performance
                 </p>
-
                 <p className="mt-2 text-sm text-slate-400">
                   How effectively are outstanding invoices being collected?
                 </p>
@@ -230,7 +244,6 @@ return (
                 <p className="text-sm font-semibold text-cyan-400">
                   Aging Analysis
                 </p>
-
                 <p className="mt-2 text-sm text-slate-400">
                   How are receivables distributed across aging periods?
                 </p>
@@ -240,84 +253,236 @@ return (
                 <p className="text-sm font-semibold text-cyan-400">
                   Payment Trends
                 </p>
-
                 <p className="mt-2 text-sm text-slate-400">
                   How do invoicing and payment patterns change over time?
                 </p>
               </div>
+
             </div>
-{/* Project Case Study */}
-<div className="mt-10 grid gap-6 md:grid-cols-3">
-  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
-    <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
-      The Challenge
-    </p>
 
-    <h3 className="mt-3 text-xl font-bold">
-      Understanding outstanding receivables
-    </h3>
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
 
-    <p className="mt-4 text-sm leading-7 text-slate-400">
-      Businesses need a clear view of unpaid invoices, customer balances,
-      payment activity, and aging periods in order to manage cash flow and
-      improve collection performance.
-    </p>
-  </div>
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+                <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+                  The Challenge
+                </p>
 
-  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
-    <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
-      The Solution
-    </p>
+                <h4 className="mt-3 text-xl font-bold">
+                  Understanding outstanding receivables
+                </h4>
 
-    <h3 className="mt-3 text-xl font-bold">
-      An interactive Power BI dashboard
-    </h3>
+                <p className="mt-4 text-sm leading-7 text-slate-400">
+                  Businesses need a clear view of unpaid invoices, customer
+                  balances, payment activity, and aging periods in order to
+                  manage cash flow and improve collection performance.
+                </p>
+              </div>
 
-    <p className="mt-4 text-sm leading-7 text-slate-400">
-      I designed a dashboard that brings invoicing, payments, outstanding
-      balances, customer performance, and receivables aging into one clear
-      analytical view.
-    </p>
-  </div>
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+                <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+                  The Solution
+                </p>
 
-  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
-    <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
-      Key Insights
-    </p>
+                <h4 className="mt-3 text-xl font-bold">
+                  An interactive Power BI dashboard
+                </h4>
 
-    <h3 className="mt-3 text-xl font-bold">
-      Supporting better decisions
-    </h3>
+                <p className="mt-4 text-sm leading-7 text-slate-400">
+                  I designed a dashboard that brings invoicing, payments,
+                  outstanding balances, customer performance, and receivables
+                  aging into one clear analytical view.
+                </p>
+              </div>
 
-    <p className="mt-4 text-sm leading-7 text-slate-400">
-      The dashboard helps identify customers with high outstanding balances,
-      monitor collection performance, analyze aging patterns, and track
-      invoicing and payment trends over time.
-    </p>
-  </div>
-</div>
-            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-              {[
-                "Total Invoiced",
-                "Payments Received",
-                "Outstanding Receivables",
-                "Collection Rate",
-                "Invoice Trend",
-                "Receivables by Customer",
-                "Payments by Method",
-                "Receivables Aging",
-              ].map((item) => (
-                <div
-                  key={item}
-                  className="rounded-xl border border-slate-800 bg-slate-900 p-4"
-                >
-                  <p className="text-sm text-slate-300">{item}</p>
-                </div>
-              ))}
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+                <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+                  Key Insights
+                </p>
+
+                <h4 className="mt-3 text-xl font-bold">
+                  Supporting better decisions
+                </h4>
+
+                <p className="mt-4 text-sm leading-7 text-slate-400">
+                  The dashboard helps identify customers with high outstanding
+                  balances, monitor collection performance, analyze aging
+                  patterns, and track invoicing and payment trends.
+                </p>
+              </div>
+
             </div>
+
           </div>
-        </div>
-      </section>
+
+        {/* Accounts Payable Project */}
+<div className="group mt-16 rounded-2xl border border-slate-800 bg-slate-950 p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
+
+  <h3 className="text-2xl font-bold">
+    Accounts Payable Dashboard
+  </h3>
+
+  <img
+    src="/accounts-payable-dashboard.png"
+    alt="Accounts Payable Power BI Dashboard"
+    className="mt-6 w-full rounded-xl border border-cyan-500/30 shadow-lg shadow-cyan-500/10"
+  />
+
+  <div className="mt-6 flex flex-wrap items-start justify-between gap-6">
+
+    <div className="max-w-3xl">
+
+      <p className="leading-7 text-slate-300">
+        {projects[1].description}
+      </p>
+
+      <div className="mt-6 flex flex-wrap gap-3">
+        {projects[1].tools.map((tool) => (
+          <span
+            key={tool}
+            className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-300"
+          >
+            {tool}
+          </span>
+        ))}
+      </div>
+
+    </div>
+
+    <div className="rounded-xl border border-slate-800 bg-slate-900 px-5 py-4">
+      <p className="text-sm text-slate-400">
+        Dashboard focus
+      </p>
+
+      <p className="mt-1 font-semibold">
+        Payables & Aging
+      </p>
+    </div>
+
+  </div>
+
+  {/* Key Analysis */}
+  <div className="mt-8 grid gap-3 sm:grid-cols-2">
+
+    <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+      <p className="text-sm font-semibold text-cyan-400">
+        Outstanding Payables
+      </p>
+
+      <p className="mt-2 text-sm text-slate-400">
+        Monitor unpaid invoices and the total amount currently outstanding.
+      </p>
+    </div>
+
+    <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+      <p className="text-sm font-semibold text-cyan-400">
+        Payment Status
+      </p>
+
+      <p className="mt-2 text-sm text-slate-400">
+        Understand the distribution of paid and unpaid invoices.
+      </p>
+    </div>
+
+    <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+      <p className="text-sm font-semibold text-cyan-400">
+        Aging Analysis
+      </p>
+
+      <p className="mt-2 text-sm text-slate-400">
+        Identify how outstanding payables are distributed across aging periods.
+      </p>
+    </div>
+
+    <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+      <p className="text-sm font-semibold text-cyan-400">
+        Vendor Exposure
+      </p>
+
+      <p className="mt-2 text-sm text-slate-400">
+        Analyze outstanding obligations across vendors.
+      </p>
+    </div>
+
+  </div>
+
+  {/* AP Case Study */}
+  <div className="mt-10 grid gap-6 md:grid-cols-3">
+
+    <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+      <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+        The Challenge
+      </p>
+
+      <h4 className="mt-3 text-xl font-bold">
+        Understanding outstanding payables
+      </h4>
+
+      <p className="mt-4 text-sm leading-7 text-slate-400">
+        Finance teams need a clear view of outstanding invoices,
+        payment obligations, and aging periods to manage cash flow
+        and prioritize payments effectively.
+      </p>
+    </div>
+
+    <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+      <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+        The Solution
+      </p>
+
+      <h4 className="mt-3 text-xl font-bold">
+        An interactive Power BI dashboard
+      </h4>
+
+      <p className="mt-4 text-sm leading-7 text-slate-400">
+        I designed an interactive dashboard that brings invoice
+        status, outstanding balances, aging analysis, and vendor
+        information into one analytical view.
+      </p>
+    </div>
+
+    <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+      <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+        Key Insights
+      </p>
+
+      <h4 className="mt-3 text-xl font-bold">
+        Supporting better payment decisions
+      </h4>
+
+      <p className="mt-4 text-sm leading-7 text-slate-400">
+        The dashboard helps identify overdue obligations, analyze
+        payable aging, monitor payment status, and understand
+        vendor exposure.
+      </p>
+    </div>
+
+  </div>
+
+  {/* Dashboard Features */}
+                    <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                    {[
+                      "Total Payables",
+                      "Outstanding Payables",
+                      "Payment Status",
+                      "Payables Aging",
+                      "Vendor Analysis",
+                      "Invoice Monitoring",
+                      "Overdue Obligations",
+                      "Interactive Slicers",
+                    ].map((item) => (
+                      <div
+                        key={item}
+                        className="rounded-xl border border-slate-800 bg-slate-900 p-4"
+                      >
+                        <p className="text-sm text-slate-300">{item}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                </div>
+
+              </div>
+            </section>
 
       {/* Skills */}
 <section id="skills" className="border-t border-slate-800">
