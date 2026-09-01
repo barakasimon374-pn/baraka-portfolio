@@ -1,19 +1,22 @@
 "use client";
 import { useState } from "react";
 import { useForm } from "@formspree/react";
+
 const projects = [
-{
-title: "Accounts Receivable & Collections",
-description:
-"An interactive Power BI dashboard designed to monitor invoicing, payments, outstanding receivables, collection performance, and customer aging.",
-tools: ["Power BI", "Excel", "DAX"],
-},
-{
-title: "Accounts Payable Dashboard",
-description:
-"An interactive Power BI dashboard designed to monitor outstanding invoices, payment status, payable aging, and vendor exposure to support better cash-flow and payment decisions.",
-tools: ["Power BI", "Excel", "DAX"],
-},
+  {
+    title: "Accounts Receivable & Collections",
+    description:
+      "An interactive Power BI dashboard designed to monitor invoicing, payments, outstanding receivables, collection performance, and customer aging.",
+    tools: ["Power BI", "Excel", "DAX"],
+    link: "https://github.com/barakasimon374-pn/accounts-receivable-dashboard.",
+  },
+  {
+    title: "Accounts Payable Dashboard",
+    description:
+      "An interactive Power BI dashboard designed to monitor outstanding invoices, payment status, payable aging, and vendor exposure to support better cash-flow and payment decisions.",
+    tools: ["Power BI", "Excel", "DAX"],
+    link: "https://github.com/barakasimon374-pn/accounts-payable-powerbi-dashboard",
+  },
 ];
 
 
@@ -171,9 +174,14 @@ return (
           {/* Accounts Receivable Project */}
           <div className="group mt-10 rounded-2xl border border-slate-800 bg-slate-950 p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
 
-            <h3 className="text-2xl font-bold">
-              Accounts Receivable & Collections Dashboard
-            </h3>
+            <a
+  href="https://github.com/barakasimon374-pn/accounts-receivable-dashboard."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-2xl font-bold hover:text-cyan-400 transition"
+>
+  Accounts Receivable & Collections
+</a>
 
             <img
               src="/accounts-receivable-banner.png"
@@ -185,11 +193,18 @@ return (
 
               <div className="max-w-3xl">
 
-                <img
-                  src="/accounts-receivable-dashboard.png"
-                  alt="Accounts Receivable & Collections Power BI Dashboard"
-                  className="mb-6 w-full rounded-xl border border-slate-700"
-                />
+                <a
+  href={projects[0].link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <img
+    src="/accounts-receivable-dashboard.png"
+    alt="Accounts Receivable Power BI Dashboard"
+    className="mt-6 w-full rounded-xl border border-cyan-500/30 shadow-lg shadow-cyan-500/10 transition duration-300 hover:scale-[1.01] hover:border-cyan-400"
+  />
+</a>
 
                 <p className="leading-7 text-slate-300">
                   {projects[0].description}
@@ -271,11 +286,11 @@ return (
                   Understanding outstanding receivables
                 </h4>
 
-                <p className="mt-4 text-sm leading-7 text-slate-400">
-                  Businesses need a clear view of unpaid invoices, customer
-                  balances, payment activity, and aging periods in order to
-                  manage cash flow and improve collection performance.
-                </p>
+                <p className="mt-4 text-base leading-7 text-slate-400">
+  Businesses need a clear view of unpaid invoices, customer
+  balances, payment activity, and aging periods in order to
+  manage cash flow and improve collection performance.
+</p>
               </div>
 
               <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
@@ -296,18 +311,18 @@ return (
 
               <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
                 <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
-                  Key Insights
-                </p>
+  Business Value
+</p>
 
-                <h4 className="mt-3 text-xl font-bold">
-                  Supporting better decisions
-                </h4>
+<h4 className="mt-3 text-xl font-bold">
+  Supporting better collection decisions
+</h4>
 
-                <p className="mt-4 text-sm leading-7 text-slate-400">
-                  The dashboard helps identify customers with high outstanding
-                  balances, monitor collection performance, analyze aging
-                  patterns, and track invoicing and payment trends.
-                </p>
+<p className="mt-4 text-base leading-7 text-slate-400">
+  The dashboard brings receivables, payment activity, customer
+  balances, and aging analysis into one view, helping users
+  prioritize collections and monitor cash-flow exposure.
+</p>
               </div>
 
             </div>
@@ -317,19 +332,31 @@ return (
         {/* Accounts Payable Project */}
 <div className="group mt-16 rounded-2xl border border-slate-800 bg-slate-950 p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
 
-  <h3 className="text-2xl font-bold">
-    Accounts Payable Dashboard
-  </h3>
-
-  <img
-    src="/accounts-payable-dashboard.png"
-    alt="Accounts Payable Power BI Dashboard"
-    className="mt-6 w-full rounded-xl border border-cyan-500/30 shadow-lg shadow-cyan-500/10"
-  />
+  <a
+  href="https://github.com/barakasimon374-pn/accounts-payable-powerbi-dashboard"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-2xl font-bold hover:text-cyan-400 transition"
+>
+  Accounts Payable Dashboard
+</a>
 
   <div className="mt-6 flex flex-wrap items-start justify-between gap-6">
 
     <div className="max-w-3xl">
+
+      <a
+  href={projects[1].link}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <img
+    src="/accounts-payable-dashboard.png"
+    alt="Accounts Payable Power BI Dashboard"
+    className="mt-6 w-full rounded-xl border border-cyan-500/30 shadow-lg shadow-cyan-500/10 transition duration-300 hover:scale-[1.01] hover:border-cyan-400"
+  />
+</a>
 
       <p className="leading-7 text-slate-300">
         {projects[1].description}
@@ -417,7 +444,7 @@ return (
         Understanding outstanding payables
       </h4>
 
-      <p className="mt-4 text-sm leading-7 text-slate-400">
+      <p className="mt-4 text-base leading-7 text-slate-400">
         Finance teams need a clear view of outstanding invoices,
         payment obligations, and aging periods to manage cash flow
         and prioritize payments effectively.
@@ -433,7 +460,7 @@ return (
         An interactive Power BI dashboard
       </h4>
 
-      <p className="mt-4 text-sm leading-7 text-slate-400">
+      <p className="mt-4 text-base leading-7 text-slate-400">
         I designed an interactive dashboard that brings invoice
         status, outstanding balances, aging analysis, and vendor
         information into one analytical view.
@@ -442,18 +469,18 @@ return (
 
     <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
       <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
-        Key Insights
-      </p>
+  Business Value
+</p>
 
-      <h4 className="mt-3 text-xl font-bold">
-        Supporting better payment decisions
-      </h4>
+<h4 className="mt-3 text-xl font-bold">
+  Supporting better payment decisions
+</h4>
 
-      <p className="mt-4 text-sm leading-7 text-slate-400">
-        The dashboard helps identify overdue obligations, analyze
-        payable aging, monitor payment status, and understand
-        vendor exposure.
-      </p>
+<p className="mt-4 text-base leading-7 text-slate-400">
+  The dashboard brings outstanding payables, payment status, aging,
+  and vendor exposure into one view, helping users prioritize
+  payment obligations and monitor cash-flow requirements.
+</p>
     </div>
 
   </div>
@@ -496,7 +523,7 @@ return (
     </h2>
 
     <p className="mt-4 max-w-2xl text-slate-300">
-      I use data analysis and visualization to transform raw information into clear insights and interactive business reports.
+      I combine data analysis, visualization, and business intelligence tools to turn raw data into clear, decision-ready insights.
     </p>
 
     <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -505,7 +532,7 @@ return (
           Power BI
         </h3>
         <p className="mt-2 text-sm leading-6 text-slate-400">
-         Building interactive dashboards that turn business data into actionable insights.
+          Building interactive dashboards, KPI cards, slicers, and business reports that turn data into actionable insights.
         </p>
       </div>
 
@@ -514,7 +541,7 @@ return (
           DAX
         </h3>
         <p className="mt-2 text-sm leading-6 text-slate-400">
-         Creating measures and calculations to analyze performance and support decision-making.
+         Creating measures and calculations to analyze performance, trends, and business metrics.
         </p>
       </div>
 
@@ -532,7 +559,7 @@ return (
           Data Visualization
         </h3>
         <p className="mt-2 text-sm leading-6 text-slate-400">
-          Transforming complex data into clear, meaningful, and easy-to-understand visuals.
+          Designing clear and meaningful visuals that make business data easier to understand and explore.
         </p>
       </div>
 
@@ -541,8 +568,7 @@ return (
           Data Analysis
         </h3>
         <p className="mt-2 text-sm leading-6 text-slate-400">
-  Analyzing data to uncover patterns, trends, and actionable insights that
-  support informed business decisions.
+Analyzing data to identify patterns, trends, and opportunities that support informed decisions.
 </p>
       </div>
     </div>
