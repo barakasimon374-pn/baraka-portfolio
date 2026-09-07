@@ -10,14 +10,22 @@ const projects = [
     tools: ["Power BI", "Excel", "DAX"],
     link: "https://github.com/barakasimon374-pn/accounts-receivable-dashboard.",
   },
-  {
+    {
     title: "Accounts Payable Dashboard",
     description:
       "An interactive Power BI dashboard designed to monitor outstanding invoices, payment status, payable aging, and vendor exposure to support better cash-flow and payment decisions.",
     tools: ["Power BI", "Excel", "DAX"],
     link: "https://github.com/barakasimon374-pn/accounts-payable-powerbi-dashboard",
   },
-];
+
+  {
+    title: "Departmental Performance Dashboard",
+    description:
+      "An interactive Power BI dashboard designed to evaluate departmental financial performance, budget utilization, employee productivity, and operational efficiency.",
+    tools: ["Power BI", "Excel", "DAX"],
+    link: "https://github.com/barakasimon374-pn/departmental-performance-dashboard",
+  },
+]; 
 
 
 export default function Home() {
@@ -221,6 +229,14 @@ return (
                   ))}
                 </div>
 
+<a
+  href="https://github.com/barakasimon374-pn/accounts-receivable-dashboard."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
+>
+  View on GitHub
+</a>
               </div>
 
               <div className="rounded-xl border border-slate-800 bg-slate-900 px-5 py-4">
@@ -232,7 +248,60 @@ return (
                   Receivables & Collections
                 </p>
               </div>
+{/* Key Analysis */}
+<div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
 
+  <div className="rounded-xl border border-slate-800 bg-slate-900 px-5 py-5">
+    <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
+      Financial Performance
+    </p>
+    <h4 className="mt-2 font-semibold">
+      Revenue vs Target
+    </h4>
+    <p className="mt-2 text-sm leading-6 text-slate-400">
+      Compares departmental revenue against targets to identify
+      departments exceeding expectations and areas requiring attention.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-800 bg-slate-900 px-5 py-5">
+    <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
+      Budget Management
+    </p>
+    <h4 className="mt-2 font-semibold">
+      Budget vs Actual Expenses
+    </h4>
+    <p className="mt-2 text-sm leading-6 text-slate-400">
+      Highlights spending patterns across departments and helps identify
+      potential budget overruns or areas of efficient resource utilization.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-800 bg-slate-900 px-5 py-5">
+    <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
+      Employee Performance
+    </p>
+    <h4 className="mt-2 font-semibold">
+      Productivity & Performance
+    </h4>
+    <p className="mt-2 text-sm leading-6 text-slate-400">
+      Evaluates employee performance across departments using performance
+      scores, completed tasks, and overall performance trends.
+    </p>
+  </div>
+
+</div>
+<div className="mt-3 rounded-xl border border-slate-800 bg-slate-900 px-5 py-5">
+  <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
+    Business Value
+  </p>
+
+  <p className="mt-2 text-sm leading-6 text-slate-400">
+    Provides management with a consolidated view of financial and workforce
+    performance, supporting better budgeting, resource allocation, and
+    departmental decision-making.
+  </p>
+</div>
             </div>
 
             <div className="mt-8 grid gap-3 sm:grid-cols-2">
@@ -329,8 +398,8 @@ return (
 
           </div>
 
-        {/* Accounts Payable Project */}
-<div className="group mt-16 rounded-2xl border border-slate-800 bg-slate-950 p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
+          {/* Accounts Payable Project */}
+          <div className="group mt-16 rounded-2xl border border-slate-800 bg-slate-950 p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
 
   <a
   href="https://github.com/barakasimon374-pn/accounts-payable-powerbi-dashboard"
@@ -372,7 +441,14 @@ return (
           </span>
         ))}
       </div>
-
+<a
+  href="https://github.com/barakasimon374-pn/accounts-payable-powerbi-dashboard"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="mt-6 inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
+>
+  View on GitHub
+</a>
     </div>
 
     <div className="rounded-xl border border-slate-800 bg-slate-900 px-5 py-4">
@@ -509,70 +585,238 @@ return (
                 </div>
 
               </div>
+        {/* Departmental Performance Dashboard */}
+        <div className="mt-16 group rounded-2xl border border-slate-800 bg-slate-950 p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg">
+
+          <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
+  Featured Project
+</p>
+
+<h3 className="mt-2 text-2xl font-bold">
+  Departmental Performance Dashboard
+</h3>
+
+          <div className="mt-6 flex flex-col gap-6">
+
+            <div>
+              <a
+                href="https://github.com/barakasimon374-pn/departmental-performance-dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src="/departmental-performance-dashboard.png"
+                  alt="Departmental Performance Power BI Dashboard"
+                  className="w-full rounded-xl border border-cyan-500/30 shadow-lg shadow-cyan-500/10 transition duration-300 hover:scale-[1.01] hover:border-cyan-400"
+                />
+              </a>
+            </div>
+
+            <div className="max-w-3xl">
+
+              <p className="leading-7 text-slate-300">
+                An interactive Power BI dashboard designed to evaluate
+                departmental financial performance, budget utilization,
+                employee productivity, and operational efficiency.
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                {["Power BI", "Excel", "DAX"].map((tool) => (
+                  <span
+                    key={tool}
+                    className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-300"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href="https://github.com/barakasimon374-pn/departmental-performance-dashboard"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
+              >
+                View on GitHub
+              </a>
+
+            </div>
+
+          </div>
+
+          <div className="mt-8 rounded-xl border border-slate-800 bg-slate-900 px-5 py-4">
+            <p className="text-sm text-slate-400">
+              Dashboard focus
+            </p>
+
+            <p className="mt-1 font-semibold">
+              Departmental Financial & Employee Performance
+            </p>
+          </div>
+          {/* The Challenge */}
+<div className="mt-10 grid gap-6 md:grid-cols-2">
+
+  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+    <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+      The Challenge
+    </p>
+
+    <h4 className="mt-3 text-xl font-bold">
+      Turning departmental data into actionable insights
+    </h4>
+    <p className="mt-4 text-base leading-7 text-slate-400">
+      Management needed a clear view of departmental revenue, budgets,
+      expenses, and employee performance. Data was difficult to compare
+      across departments, making it challenging to identify performance
+      gaps, budget variances, and areas requiring attention.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+    <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+      The Solution
+    </p>
+
+    <h4 className="mt-3 text-xl font-bold">
+      An interactive departmental performance dashboard
+    </h4>
+
+    <p className="mt-4 text-base leading-7 text-slate-400">
+      I developed an interactive Power BI dashboard that consolidates
+      departmental financial and workforce data into one analytical view.
+      The dashboard enables users to compare revenue against targets,
+      evaluate budget performance, and monitor employee productivity and
+      performance ratings.
+    </p>
+  </div>
+
+</div>
+          {/* Key Analysis */}
+          <div className="mt-6">
+            <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+              Key Analysis
+            </p>
+
+            <div className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-5">
+                <p className="font-semibold">
+                  Revenue vs Target
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Compares departmental revenue against targets to identify
+                  departments exceeding expectations and areas requiring attention.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-5">
+                <p className="font-semibold">
+                  Budget vs Actual
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Highlights spending patterns across departments and identifies
+                  potential budget overruns or efficient resource utilization.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-5">
+                <p className="font-semibold">
+                  Employee Performance
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Evaluates employee performance across departments using
+                  performance scores and overall productivity trends.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-5">
+                <p className="font-semibold">
+                  Performance Ratings
+                </p>
+                <p className="mt-2 text-sm leading-6 text-slate-400">
+                  Examines the distribution of employee performance ratings
+                  to provide a broader view of workforce effectiveness.
+                </p>
+              </div>
+
+            </div>
+          </div>
+         {/* Business Value */}
+    <div className="mt-6 rounded-xl border border-slate-800 bg-slate-900 p-5">
+      <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
+        Business Value
+      </p>
+
+      <p className="mt-2 text-base leading-7 text-slate-300">
+        Provides management with a consolidated view of financial and
+        workforce performance, supporting better budgeting, resource
+        allocation, and departmental decision-making.
+      </p>
+    </div> 
+        </div>            
             </section>
 
       {/* Skills */}
 <section id="skills" className="border-t border-slate-800">
-  <div className="mx-auto max-w-6xl px-6 py-20">
-    <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
-      Skills
+  
+ <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+
+  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
+    <h3 className="text-lg font-semibold text-cyan-400">
+      Power BI
+    </h3>
+    <p className="mt-2 text-sm leading-6 text-slate-400">
+      Building interactive dashboards, KPI reports, slicers, and business intelligence solutions for decision-making.
     </p>
-
-    <h2 className="mt-3 text-3xl font-bold">
-      Skills & Expertise
-    </h2>
-
-    <p className="mt-4 max-w-2xl text-slate-300">
-      I combine data analysis, visualization, and business intelligence tools to turn raw data into clear, decision-ready insights.
-    </p>
-
-    <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
-        <h3 className="text-lg font-semibold text-cyan-400">
-          Power BI
-        </h3>
-        <p className="mt-2 text-sm leading-6 text-slate-400">
-          Building interactive dashboards, KPI cards, slicers, and business reports that turn data into actionable insights.
-        </p>
-      </div>
-
-      <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
-        <h3 className="text-lg font-semibold text-cyan-400">
-          DAX
-        </h3>
-        <p className="mt-2 text-sm leading-6 text-slate-400">
-         Creating measures and calculations to analyze performance, trends, and business metrics.
-        </p>
-      </div>
-
-      <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
-        <h3 className="text-lg font-semibold text-cyan-400">
-          Microsoft Excel
-        </h3>
-        <p className="mt-2 text-sm leading-6 text-slate-400">
-          Organizing, analyzing, and preparing data for reporting and business analysis.
-        </p>
-      </div>
-
-      <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
-        <h3 className="text-lg font-semibold text-cyan-400">
-          Data Visualization
-        </h3>
-        <p className="mt-2 text-sm leading-6 text-slate-400">
-          Designing clear and meaningful visuals that make business data easier to understand and explore.
-        </p>
-      </div>
-
-      <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
-        <h3 className="text-lg font-semibold text-cyan-400">
-          Data Analysis
-        </h3>
-        <p className="mt-2 text-sm leading-6 text-slate-400">
-Analyzing data to identify patterns, trends, and opportunities that support informed decisions.
-</p>
-      </div>
-    </div>
   </div>
+
+  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
+    <h3 className="text-lg font-semibold text-cyan-400">
+      DAX
+    </h3>
+    <p className="mt-2 text-sm leading-6 text-slate-400">
+      Creating calculated measures, KPIs, and analytical calculations to evaluate performance, trends, and business metrics.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
+    <h3 className="text-lg font-semibold text-cyan-400">
+      Microsoft Excel
+    </h3>
+    <p className="mt-2 text-sm leading-6 text-slate-400">
+      Cleaning, organizing, analyzing, and preparing structured data for reporting and business analysis.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
+    <h3 className="text-lg font-semibold text-cyan-400">
+      Data Analysis
+    </h3>
+    <p className="mt-2 text-sm leading-6 text-slate-400">
+      Analyzing data to identify patterns, trends, performance gaps, and opportunities that support informed decisions.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
+    <h3 className="text-lg font-semibold text-cyan-400">
+      Data Visualization
+    </h3>
+    <p className="mt-2 text-sm leading-6 text-slate-400">
+      Designing clear and meaningful visualizations that communicate complex business data effectively.
+    </p>
+  </div>
+
+  <div className="rounded-xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400">
+    <h3 className="text-lg font-semibold text-cyan-400">
+      Business Intelligence
+    </h3>
+    <p className="mt-2 text-sm leading-6 text-slate-400">
+      Transforming raw business data into actionable insights for financial reporting, performance monitoring, and decision-making.
+    </p>
+  </div>
+
+</div>
 </section>
 
      {/* Contact */}
@@ -589,7 +833,22 @@ Analyzing data to identify patterns, trends, and opportunities that support info
     <p className="mt-4 max-w-xl text-slate-300">
       I'm open to opportunities in data analysis and business intelligence, where I can transform data into meaningful insights that support better decision-making.
     </p>
+<p className="mt-4 max-w-xl text-slate-300">
+  I'm open to opportunities in data analysis and business intelligence, where I can transform data into meaningful insights that support better decision-making.
+</p>
 
+<div className="mt-6 flex flex-wrap gap-4">
+  <a
+    href="https://github.com/barakasimon374-pn"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
+  >
+    GitHub
+  </a>
+</div>
+
+<form onSubmit={handleSubmit} className="mt-8 max-w-xl space-y-4"></form>
    <form onSubmit={handleSubmit} className="mt-8 max-w-xl space-y-4">
   <input
     type="text"
