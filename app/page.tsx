@@ -190,7 +190,7 @@ return (
           <div className="group mt-10 rounded-2xl border border-slate-800 bg-slate-950 p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
 
             <a
-  href="https://github.com/barakasimon374-pn/accounts-receivable-dashboard."
+  href="https://github.com/barakasimon374-pn/accounts-receivable-dashboard"
   target="_blank"
   rel="noopener noreferrer"
   className="text-2xl font-bold hover:text-cyan-400 transition"
@@ -1009,9 +1009,6 @@ return (
     <p className="mt-4 max-w-xl text-slate-300">
       I'm open to opportunities in data analysis and business intelligence, where I can transform data into meaningful insights that support better decision-making.
     </p>
-<p className="mt-4 max-w-xl text-slate-300">
-  I'm open to opportunities in data analysis and business intelligence, where I can transform data into meaningful insights that support better decision-making.
-</p>
 
 <div className="mt-6 flex flex-wrap gap-4">
   <a
