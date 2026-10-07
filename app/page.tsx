@@ -8,16 +8,15 @@ const projects = [
     description:
       "An interactive Power BI dashboard designed to monitor invoicing, payments, outstanding receivables, collection performance, and customer aging.",
     tools: ["Power BI", "Excel", "DAX"],
-    link: "https://github.com/barakasimon374-pn/accounts-receivable-dashboard.",
+    link: "https://github.com/barakasimon374-pn/accounts-receivable-dashboard",
   },
-    {
+  {
     title: "Accounts Payable Dashboard",
     description:
       "An interactive Power BI dashboard designed to monitor outstanding invoices, payment status, payable aging, and vendor exposure to support better cash-flow and payment decisions.",
     tools: ["Power BI", "Excel", "DAX"],
     link: "https://github.com/barakasimon374-pn/accounts-payable-powerbi-dashboard",
   },
-
   {
     title: "Departmental Performance Dashboard",
     description:
@@ -25,6 +24,14 @@ const projects = [
     tools: ["Power BI", "Excel", "DAX"],
     link: "https://github.com/barakasimon374-pn/departmental-performance-dashboard",
   },
+  
+  {
+  title: "Excel Order Page & CRM Automation",
+  description:
+    "A web-based Excel order upload page that validates sales-order files and launches an automated CRM workflow for product selection, inventory allocation, order posting, payment processing, and Excel reporting.",
+  tools: ["Python", "FastAPI", "Playwright", "Excel"],
+  link: "https://github.com/barakasimon374-pn/crm-order-automation",
+},
 ]; 
 
 
@@ -230,7 +237,7 @@ return (
                 </div>
 
 <a
-  href="https://github.com/barakasimon374-pn/accounts-receivable-dashboard."
+  href="https://github.com/barakasimon374-pn/accounts-receivable-dashboard"
   target="_blank"
   rel="noopener noreferrer"
   className="mt-6 inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
@@ -754,7 +761,176 @@ return (
         allocation, and departmental decision-making.
       </p>
     </div> 
-        </div>            
+        </div>
+
+          {/* CRM Order Automation Project */}
+          <div className="group mt-16 rounded-2xl border border-slate-800 bg-slate-950 p-8 transition duration-300 hover:-translate-y-1 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
+
+            <p className="text-xs font-semibold uppercase tracking-widest text-cyan-400">
+              Featured Project
+            </p>
+
+            <h3 className="mt-2 text-2xl font-bold">
+              Excel Order Upload &amp; CRM Automation
+            </h3>
+
+            <div className="mt-6 flex flex-col gap-6">
+              <a
+                href={projects[3].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block"
+              >
+                <img
+                  src="/crm-order-automation.png"
+                  alt="CRM Order Automation Dashboard"
+                  className="w-full rounded-xl border border-cyan-500/30 shadow-lg shadow-cyan-500/10 transition duration-300 hover:scale-[1.01] hover:border-cyan-400"
+                />
+              </a>
+            </div>
+
+            <div className="mt-6 max-w-3xl">
+              <p className="leading-7 text-slate-300">
+                {projects[3].description}
+              </p>
+
+              <div className="mt-6 flex flex-wrap gap-3">
+                {projects[3].tools.map((tool) => (
+                  <span
+                    key={tool}
+                    className="rounded-full border border-slate-700 px-4 py-2 text-sm text-slate-300"
+                  >
+                    {tool}
+                  </span>
+                ))}
+              </div>
+
+              <a
+                href={projects[3].link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
+              >
+                View on GitHub
+              </a>
+            </div>
+
+            <div className="mt-8 rounded-xl border border-slate-800 bg-slate-900 px-5 py-4">
+              <p className="text-sm text-slate-400">Project focus</p>
+              <p className="mt-1 font-semibold">
+                Workflow Automation &amp; Reporting
+              </p>
+            </div>
+
+            {/* Key Analysis */}
+            <div className="mt-8 grid gap-3 sm:grid-cols-2">
+              <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+                <p className="text-sm font-semibold text-cyan-400">
+                  Order Validation
+                </p>
+                <p className="mt-2 text-sm text-slate-400">
+                  Validates Excel sales-order files before any CRM interaction, catching errors early.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+                <p className="text-sm font-semibold text-cyan-400">
+                  Inventory Allocation
+                </p>
+                <p className="mt-2 text-sm text-slate-400">
+                  Checks live CRM warehouse inventory and allocates available stock across order lines.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+                <p className="text-sm font-semibold text-cyan-400">
+                  Automated CRM Posting
+                </p>
+                <p className="mt-2 text-sm text-slate-400">
+                  Drives product selection, quantity setting, pricing, and payment submission end-to-end.
+                </p>
+              </div>
+
+              <div className="rounded-lg border border-slate-800 bg-slate-950 p-4">
+                <p className="text-sm font-semibold text-cyan-400">
+                  Posting Report
+                </p>
+                <p className="mt-2 text-sm text-slate-400">
+                  Generates a colour-coded Excel posting report with inventory status for every order line.
+                </p>
+              </div>
+            </div>
+
+            {/* Case Study */}
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+                <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+                  The Challenge
+                </p>
+                <h4 className="mt-3 text-xl font-bold">
+                  Manual CRM order entry was slow and error-prone
+                </h4>
+                <p className="mt-4 text-base leading-7 text-slate-400">
+                  Sales orders arrived as Excel files that had to be keyed
+                  into the CRM one line at a time, with no automated inventory
+                  check or structured posting record.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+                <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+                  The Solution
+                </p>
+                <h4 className="mt-3 text-xl font-bold">
+                  A fully automated upload and posting pipeline
+                </h4>
+                <p className="mt-4 text-base leading-7 text-slate-400">
+                  I built a web-based upload page paired with a Playwright
+                  automation script that reads each order line, searches the
+                  CRM, checks inventory, sets prices, and posts payments
+                  without manual intervention.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-slate-800 bg-slate-900 p-6">
+                <p className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+                  Business Value
+                </p>
+                <h4 className="mt-3 text-xl font-bold">
+                  Faster order processing with a full audit trail
+                </h4>
+                <p className="mt-4 text-base leading-7 text-slate-400">
+                  Orders that previously took hours to enter manually are now
+                  processed automatically. Every run produces a colour-coded
+                  Excel report showing inventory status and allocated quantities
+                  for each line.
+                </p>
+              </div>
+            </div>
+
+            {/* Feature tags */}
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                "Excel Order Upload",
+                "Live Inventory Check",
+                "Automated CRM Entry",
+                "Payment Processing",
+                "Posting Report",
+                "Zero-Inventory Handling",
+                "Paired Product Logic",
+                "Multi-Order Batch Run",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="rounded-xl border border-slate-800 bg-slate-900 p-4"
+                >
+                  <p className="text-sm text-slate-300">{item}</p>
+                </div>
+              ))}
+            </div>
+
+          </div>
+
             </section>
 
       {/* Skills */}
