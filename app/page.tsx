@@ -9,6 +9,7 @@ const projects = [
       "An interactive Power BI dashboard designed to monitor invoicing, payments, outstanding receivables, collection performance, and customer aging.",
     tools: ["Power BI", "Excel", "DAX"],
     link: "https://github.com/barakasimon374-pn/accounts-receivable-dashboard",
+    pbiLink: "https://app.powerbi.com/groups/me/reports/1c635d0b-32c1-47ff-87a3-11a7fe5931f9/8b208a1cf97da4765a5c?experience=power-bi",
   },
   {
     title: "Accounts Payable Dashboard",
@@ -16,6 +17,7 @@ const projects = [
       "An interactive Power BI dashboard designed to monitor outstanding invoices, payment status, payable aging, and vendor exposure to support better cash-flow and payment decisions.",
     tools: ["Power BI", "Excel", "DAX"],
     link: "https://github.com/barakasimon374-pn/accounts-payable-powerbi-dashboard",
+    pbiLink: "https://app.powerbi.com/groups/me/reports/69398f11-7d10-4c61-a3dd-2ddbcd6b1400/9477bb76c0d13052d1a5?experience=power-bi",
   },
   {
     title: "Departmental Performance Dashboard",
@@ -23,15 +25,15 @@ const projects = [
       "An interactive Power BI dashboard designed to evaluate departmental financial performance, budget utilization, employee productivity, and operational efficiency.",
     tools: ["Power BI", "Excel", "DAX"],
     link: "https://github.com/barakasimon374-pn/departmental-performance-dashboard",
+    pbiLink: "https://app.powerbi.com/groups/me/reports/fa98e67b-6eec-44c5-8aab-bbfcdfdc0c5b/55a2bba33a29d47e618e?experience=power-bi",
   },
-  
   {
-  title: "Excel Order Page & CRM Automation",
-  description:
-    "A web-based Excel order upload page that validates sales-order files and launches an automated CRM workflow for product selection, inventory allocation, order posting, payment processing, and Excel reporting.",
-  tools: ["Python", "FastAPI", "Playwright", "Excel"],
-  link: "https://github.com/barakasimon374-pn/crm-order-automation",
-},
+    title: "Excel Order Page & CRM Automation",
+    description:
+      "A web-based Excel order upload page that validates sales-order files and launches an automated CRM workflow for product selection, inventory allocation, order posting, payment processing, and Excel reporting.",
+    tools: ["Python", "FastAPI", "Playwright", "Excel"],
+    link: "https://github.com/barakasimon374-pn/crm-order-automation",
+  },
 ]; 
 
 
@@ -236,14 +238,27 @@ return (
                   ))}
                 </div>
 
-<a
-  href="https://github.com/barakasimon374-pn/accounts-receivable-dashboard"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-6 inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
->
-  View on GitHub
-</a>
+<div className="mt-6 flex flex-wrap gap-3">
+  <a
+    href="https://github.com/barakasimon374-pn/accounts-receivable-dashboard"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
+  >
+    View on GitHub
+  </a>
+  <a
+    href={projects[0].pbiLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-lg border border-yellow-500/50 bg-yellow-500/10 px-5 py-2.5 text-sm font-semibold text-yellow-400 transition hover:border-yellow-400 hover:bg-yellow-400/20"
+  >
+    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm13 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+    </svg>
+    View in Power BI
+  </a>
+</div>
               </div>
 
               <div className="rounded-xl border border-slate-800 bg-slate-900 px-5 py-4">
@@ -448,14 +463,27 @@ return (
           </span>
         ))}
       </div>
-<a
-  href="https://github.com/barakasimon374-pn/accounts-payable-powerbi-dashboard"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="mt-6 inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
->
-  View on GitHub
-</a>
+<div className="mt-6 flex flex-wrap gap-3">
+  <a
+    href="https://github.com/barakasimon374-pn/accounts-payable-powerbi-dashboard"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
+  >
+    View on GitHub
+  </a>
+  <a
+    href={projects[1].pbiLink}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-flex items-center gap-2 rounded-lg border border-yellow-500/50 bg-yellow-500/10 px-5 py-2.5 text-sm font-semibold text-yellow-400 transition hover:border-yellow-400 hover:bg-yellow-400/20"
+  >
+    <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm13 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+    </svg>
+    View in Power BI
+  </a>
+</div>
     </div>
 
     <div className="rounded-xl border border-slate-800 bg-slate-900 px-5 py-4">
@@ -639,14 +667,27 @@ return (
                 ))}
               </div>
 
-              <a
-                href="https://github.com/barakasimon374-pn/departmental-performance-dashboard"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-6 inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
-              >
-                View on GitHub
-              </a>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <a
+                  href="https://github.com/barakasimon374-pn/departmental-performance-dashboard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-slate-700 px-5 py-2.5 text-sm font-semibold text-slate-200 transition hover:border-cyan-400 hover:bg-cyan-400/10 hover:text-cyan-400"
+                >
+                  View on GitHub
+                </a>
+                <a
+                  href={projects[2].pbiLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg border border-yellow-500/50 bg-yellow-500/10 px-5 py-2.5 text-sm font-semibold text-yellow-400 transition hover:border-yellow-400 hover:bg-yellow-400/20"
+                >
+                  <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M3 3h8v8H3zm10 0h8v8h-8zM3 13h8v8H3zm13 0a4 4 0 1 1 0 8 4 4 0 0 1 0-8z"/>
+                  </svg>
+                  View in Power BI
+                </a>
+              </div>
 
             </div>
 
